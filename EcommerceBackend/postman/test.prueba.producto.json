@@ -1,0 +1,62 @@
+{"nombre": "Prueba Registrar productos",
+  "request":{
+    "url": "http://localhost:8080/products/register",
+    "method": "POST",
+    "expectedResponse":{
+      "status": 201,
+      "body":{
+        "id": 1,
+        "nombre": "Naranja",
+        "cantidad": 10,
+        "precio": 1000
+      }
+    }
+  },
+
+
+  "nombre": "Consultar todos los productos",
+  "request": {
+    "url": "http://localhost:8080/products/findAll",
+    "method": "GET",
+    "expectedResponse": {
+      "status": 200
+    }
+  },
+
+
+  "nombre": "Prueba actualizar producto por id",
+  "request":{
+    "url": "http://localhost:8080/products/update/3",
+    "method": "PATCH",
+    "expectedResponse":{
+      "status": 200,
+      "body": {
+        "id": 3,
+        "nombre": "Pera",
+        "cantidad": 30,
+        "precio": 2000.0
+      }
+    }
+  },
+
+  "nombre": "Prueba eliminar producto por id",
+  "request":{
+    "url": "http://localhost:8080/products/delete/4",
+    "method": "DELETE",
+    "expectedResponse":{
+      "status": 200
+    }
+  },
+
+  "nombre": "Prueba buscar producto por id",
+  "request":{
+    "url": "http://localhost:8080/products/findById/1",
+    "method": "GET",
+    "expectedResponse": {
+      "status": 200
+    }
+  }
+}
+
+
+

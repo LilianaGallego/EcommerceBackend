@@ -1,0 +1,72 @@
+{"nombre": "Prueba Registrar usuarios",
+"request":{
+  "url": "http://localhost:8080/users/register",
+  "method": "POST",
+  "expectedResponse":{
+    "status": 201,
+    "body":{
+    "id": 1,
+    "nombres": "Martha Liliana",
+    "apellidos": "Gallego Murillo",
+    "ciudad": "Ibagué",
+    "direccion": "Conjunto Vizta",
+    "correo": "lilianagallegom@gmail.com",
+    "telefono": "3118688145",
+    "contraseña": "lili1989",
+    "terminos": true
+    }
+  }
+},
+
+
+"nombre": "Consultar todos los usuarios",
+"request": {
+  "url": "http://localhost:8080/users/findAll",
+  "method": "GET",
+  "expectedResponse": {
+    "status": 200
+  }
+},
+
+
+"nombre": "Prueba actualizar usuario por id",
+"request":{
+  "url": "http://localhost:8080/users/update/2",
+  "method": "PATCH",
+  "expectedResponse":{
+    "status": 200,
+    "body":{
+      "id": 2,
+      "nombres": "Ruru",
+      "apellidos": "Palacio Pinilla",
+      "ciudad": "Ibagué",
+      "direccion": "Entrerrios",
+      "correo": "rurupapi@gmail.com",
+      "telefono": "3163590645",
+      "contraseña": "ruru2024",
+      "terminos": true
+    }
+  }
+},
+
+  "nombre": "Prueba eliminar usuario por id",
+  "request":{
+  "url": "http://localhost:8080/users/delete/5",
+  "method": "DELETE",
+  "expectedResponse":{
+    "status": 200
+  }
+},
+
+"nombre": "Prueba buscar usuario por id",
+"request":{
+  "url": "http://localhost:8080/users/findById/1",
+  "method": "GET",
+  "expectedResponse": {
+    "status": 200
+  }
+}
+}
+
+
+
